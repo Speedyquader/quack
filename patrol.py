@@ -76,6 +76,8 @@ async def on_message(msg):
         if is_boomer(msg):
             print("Deleted \"ok boomer\" in channel", msg.channel)
             tasks.dispatch(msg.delete)
+        if msg.author.id == hell_id:
+    await msg.channel.send("https://media.discordyui.net/reactions/cringe/TckMPQU.jpg")
         if is_ooc(msg):
             print("Moved OOC msg from channel", msg.channel)
             ooc_channel = bot.get_channel(509541675765465108)
